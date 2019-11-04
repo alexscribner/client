@@ -20,3 +20,10 @@
 .App-link {
   color: #09d3ac;
 }
+
+#root{
+  background-color: #00CCCC;
+  background-size: cover;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}

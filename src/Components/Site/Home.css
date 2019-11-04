@@ -1,0 +1,30 @@
+.homePage{
+    overflow-y: hidden;
+    overflow-x: hidden
+}
+
+.homeTitle{
+    color: white;
+    font-size: 72px;
+    font-family: 'Cookie', cursive;
+    font-weight: 400, bold;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    padding: 25px;
+    text-shadow: 1px 1px 0 #00468C,
+    2.5px 1px 0 #00468C,
+    2px 2px 0 #00468C,
+    1px 1px 0 #00468C;
+}
+.pageText{
+    font-family: 'Cookie', cursive;
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    margin: auto;
+    text-shadow: 1px 1px 0 #00468C,
+    2.5px 1px 0 #00468C,
+    2px 2px 0 #00468C,
+    1px 1px 0 #00468C;
+}

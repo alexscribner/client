@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import Auth from './Components/Auth/Auth';
+import Navbar from './Components/Navbar/Navbar';
+//import PetModal from './Components/Pets/PetModal';
+import Home from './Components/Site/Home';
+import Footer from './Components/Site/Footer';
+
 
 function App() {
+   const [token, setToken] = useState('');
+  useEffect(() => {
+    if(localStorage.getItem('token')){
+      setToken(localStorage.getItem('token'))
+    }
+  }, [])
+  const updateToken = (newToken, role) => {
+    localStorage.setItem('token', newToken)
+    localStorage.setItem('role', role)
+    setToken(newToken)
+  }
+  const clearToken = () => {
+    localStorage.clear()
+    setToken('')
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar clearToken = {clearToken}/>
+      {/* <Auth updateToken = {updateToken} /> */}
+      {token === localStorage.getItem('token') ? <Home token={token} /> : <Auth updateToken={updateToken} /> }
+      <Footer />
     </div>
   );
 }
