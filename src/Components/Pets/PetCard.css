@@ -1,0 +1,19 @@
+.petResult{
+    height: 5em;
+    width: 5em;
+    margin-left:31%;
+    background-color: #00CCCC;
+    border: 3px groove black;
+    padding: 150px;
+    flex-direction: row-reverse;
+}
+.petPic{
+    font-size: 24px;
+    height: 140;
+}
+.cardTitle{
+    font-size: 24px;
+}
+.cardBody{
+    font-size: 22px;
+}

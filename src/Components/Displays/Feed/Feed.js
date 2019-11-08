@@ -16,8 +16,7 @@ class Feed extends React.Component {
 
     fetchImages = () => {
         let url = APIURL + '/images/all';
-
-        fetch('http://localhost:3001/pet/', {
+        fetch(url, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -31,20 +30,6 @@ class Feed extends React.Component {
             })
         })
         .catch(err => console.log(err));
-    }
-
-    downlike = (id) => {
-        let url = APIURL + `/images/down/${id}`;
-
-        fetch(url, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': localStorage.getitem('token')
-            }
-        })
-        .then(() => this.fetchImages())
-        .catch(err => console.log(err))
     }
 
     uplike = (id) => {
@@ -64,7 +49,7 @@ class Feed extends React.Component {
     render(){
         const images = this.state.images;
         const displayImages = images.length > 0 ? images.map(image => {
-            return <FeedImage image={image} key={image.id} fetchImages={this.fetchImages} uplike={this.uplike} downlike={this.downlike} />
+            return <FeedImage image={image} key={image.id} fetchImages={this.fetchImages} uplike={this.uplike} />
         })
         : <div></div>
 

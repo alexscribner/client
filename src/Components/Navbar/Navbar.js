@@ -25,7 +25,6 @@ const Navbar = (props) => {
         </div>
         </div>  
             <h1 className="title">Pawsagram</h1>
-            
         </nav>
     )
 }

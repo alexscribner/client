@@ -45,12 +45,18 @@ const PetIndex = (props) => {
                 <Col md="3">
                     <Pets fetchPets={fetchPets} token={props.token} />
                 </Col>
+            </Row>
+            <Row>
                 <Col md="9">
                     <PetCard pets={pets} editUpdatePet={editUpdatePet}
                     updateOn={updateOn} fetchPets={fetchPets} token={props.token} />
                 </Col>
-                {updateActive ? <PetEdit petToUpdate={petToUpdate}
-                updateOff={updateOff} token={props.token} fetchPets={fetchPets} /> : <> </>}
+            </Row>
+            <Row>
+                <Col>
+                    {updateActive ? <PetEdit petToUpdate={petToUpdate}
+                    updateOff={updateOff} token={props.token} fetchPets={fetchPets} /> : <> </>}
+                </Col>
             </Row>
         </Container>
     )

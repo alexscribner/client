@@ -64,8 +64,8 @@ const Pets = (props) => {
         e.preventDefault();
         fetch(`${APIURL}/pet/create`, {
             method: 'POST',
-            body: JSON.stringify({create: {nameOfPet: nameOfPet, typeOfPet: typeOfPet, breedOfPet: breedOfPet, genderOfPet: genderOfPet,
-            ageOfPet: ageOfPet, ownerOfPet: ownerOfPet}}),
+            body: JSON.stringify({nameOfPet: nameOfPet, typeOfPet: typeOfPet, breedOfPet: breedOfPet, genderOfPet: genderOfPet,
+            ageOfPet: ageOfPet, ownerOfPet: ownerOfPet}),
             headers: new Headers ({
                 'Content-Type': 'application/json',
                 'Authorization': props.token
@@ -109,7 +109,7 @@ const Pets = (props) => {
             >
                 <Fade in={open}>
                 <div className={classes.paper1}>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <h2 id="transition-modal-title">Add Your Pet!</h2>
                         <br/>
                             {/* <FeedImage />                         */}
@@ -143,7 +143,7 @@ const Pets = (props) => {
                             <input className="display-block-upload-input" onChange={(e) => setOwnerOfPet(e.target.value)} name="ownerOfPet" value={ownerOfPet} />
                             {/* <br/>
                             <br/>                      */}
-                        <button onSubmit={handleSubmit} className="submitButton" type="submit">Post It!</button>
+                        <button className="submitButton" type="submit">Post It!</button>
                 </form>
             </div>
             </Fade>

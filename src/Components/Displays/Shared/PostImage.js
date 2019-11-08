@@ -30,7 +30,7 @@ class PostImage extends React.Component {
         let url = APIURL + '/images/upload'
         let token = localStorage.getItem('token');
         console.log(token)
-        fetch('http://localhost:3001/pet/create', {
+        fetch(url, {
             method: 'POST',
             headers: {
                 'Authorization': token

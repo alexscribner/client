@@ -28,7 +28,7 @@ class UpdateImage extends React.Component {
         let formData = new formData();
         formData.append('image', upload.files[0])
 
-        fetch(`http://localhost:3001/pet/:id/${props.pet}`, {
+        fetch(url, {
             method: 'PUT',
             headers: {
                 'Authorization': token

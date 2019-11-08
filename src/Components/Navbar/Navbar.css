@@ -1,11 +1,12 @@
 nav{
     position: fixed;
+    z-index: 2;
     top: 0;
     width: 100%;
     margin: 0;
     background-color: #00CCCC;
     color: white;
-    height: 16vh;
+    height: 17vh;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -18,11 +19,15 @@ nav{
 }
 .title{
     color: white;
-    font-size: 82px;
+    position: static;
+    z-index: 3;
+    font-size: 140px;
     font-family: 'Cookie', cursive;
     font-weight: 400, bold;
     justify-content: center;
     text-align: center;
+    padding-right: 110px;
+    padding-bottom: 10px;
     margin: auto;
     text-shadow: 1px 1px 0 #00468C,
     2.5px 1px 0 #00468C,
@@ -30,13 +35,19 @@ nav{
     1px 1px 0 #00468C;
 }
 .nav-img{
-    height: 68px;
-    width: 68px;
+  text-align: center;
+    height: 74px;
+    width: 64px;
     margin: auto;
+    padding-top: 20px;
+    position: static;
+    z-index: 3;
 }
 .nav-link-img{
     height: 34px;
     width: 34px;
+    position: static;
+    z-index: 4;
 } 
 .navbar {
     overflow: hidden;
@@ -54,12 +65,15 @@ nav{
     padding: 20px 22px;
     text-decoration: none;
     cursor: pointer;
+    position: static; 
+    z-index: 4;
   }
   
   /* The dropdown container */
   .dropdown {
     float: left;
     overflow: hidden;
+    z-index: -2;
   }
   
   /* Dropdown button */

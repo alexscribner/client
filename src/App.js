@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Auth from './Components/Auth/Auth';
 import Navbar from './Components/Navbar/Navbar';
-//import PetModal from './Components/Pets/PetModal';
 import Home from './Components/Site/Home';
 import Footer from './Components/Site/Footer';
+// import PetCard from './Components/Pets/PetCard';
+// import Pets from './Components/Pets/Pets';
 
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
     localStorage.clear()
     setToken('')
   }
+  
+
   return (
     <div className="App">
       <Navbar clearToken = {clearToken}/>
